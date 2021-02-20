@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Title } from "../styles/pages/Home";
 import api from '../services/api';
 import { GetServerSideProps } from "next";
@@ -13,6 +13,12 @@ interface IHomeProps {
 }
 
 export default function Home({ recommendedProducts }:IHomeProps) {
+  const handleSum = useCallback(async () => {
+    const math = (await import('../lib/math')).default;
+
+    alert(math.sum(3,5));
+  }, [])
+
   return (
     <div>
       <Title>Hello World</Title>
@@ -23,6 +29,8 @@ export default function Home({ recommendedProducts }:IHomeProps) {
             )
           })}
       </ul>
+
+      <button onClick={handleSum}>Sum!</button>
     </div>
   )
 }

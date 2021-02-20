@@ -29,7 +29,6 @@ export default function Category({ products }: ICategoryProps){
         ))}
       </ul>
     </div>
-
   );
 }
 
