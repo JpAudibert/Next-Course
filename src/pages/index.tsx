@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
-import { Title } from "../styles/pages/Home";
-import api from '../services/api';
+import { Title } from "@/styles/pages/Home";
+import api from '@/services/api';
 import { GetServerSideProps } from "next";
 
 interface IRecommendedProducts{

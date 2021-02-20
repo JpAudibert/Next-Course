@@ -3,7 +3,7 @@ import { useCallback, useState } from 'react';
 import dynamic from 'next/dynamic';
 
 const AddToCartModal = dynamic(
-  () => import('../../../components/addToCartModal'),
+  () => import('@/components/addToCartModal'),
   {loading: () => <p>Loading...</p>}
 )
 

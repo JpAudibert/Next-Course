@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from 'next'
 import {useRouter} from 'next/router'
-import api from '../../../services/api'
+import api from '@/services/api'
 
 interface IProducts{
   id: string;
